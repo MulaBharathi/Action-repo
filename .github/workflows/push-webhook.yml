@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Send webhook to target server
         run: |
-          curl -X POST https://e9ec-2401-4900-88e1-63e1-e9b1-3008-136e-cafc.ngrok-free.app -> http://localhost:50
+          curl -X POST https://e9ec-2401-4900-88e1-63e1-e9b1-3008-136e-cafc.ngrok-free.app/webhook \
           -H "Content-Type: application/json" \
           -d '{
                 "repository": {
