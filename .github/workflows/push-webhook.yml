@@ -21,8 +21,8 @@ jobs:
                 },
                 "head_commit": {
                   "message": "Initial push from GitHub Actions"
+                  "timestamp": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"
                 },
                 "ref": "refs/heads/main",
-                "timestamp": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"
               }'
 
