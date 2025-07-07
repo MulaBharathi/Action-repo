@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Send webhook to Flask server
         run: |
-          curl -X POST https://3777-2401-4900-88e1-63e1-e9b1-3008-136e-cafc.ngrok-free.app/webhook \
+          curl -X POST  https://a49d-2401-4900-88e1-63e1-e9b1-3008-136e-cafc.ngrok-free.app/webhook \
           -H "Content-Type: application/json" \
           -d '{
                 "ref": "refs/heads/main",
