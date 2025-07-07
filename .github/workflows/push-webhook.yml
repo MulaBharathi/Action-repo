@@ -4,25 +4,22 @@ on:
   push:
     branches:
       - main
+
 jobs:
   send-webhook:
     runs-on: ubuntu-latest
     steps:
-      - name: Send webhook to target server
+      - name: Send webhook to Flask server
         run: |
-          curl -X POST https://b5e5-2401-4900-88e1-63e1-e9b1-3008-136e-cafc.ngrok-free.app/webhook \
+          curl -X POST https://3777-2401-4900-88e1-63e1-e9b1-3008-136e-cafc.ngrok-free.app/webhook \
           -H "Content-Type: application/json" \
           -d '{
-                "repository": {
-                  "name": "action-repo"
-                },
+                "ref": "refs/heads/main",
                 "pusher": {
                   "name": "techstax-user"
                 },
                 "head_commit": {
-                  "message": "Initial push from GitHub Actions"
                   "timestamp": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"
-                },
-                "ref": "refs/heads/main",
+                }
               }'
 
