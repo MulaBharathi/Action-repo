@@ -1,3 +1,0 @@
-trigger push webhook
-webhook test
-webhook test
